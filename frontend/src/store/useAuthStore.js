@@ -3,7 +3,7 @@ import { axiosInstance } from "../lib/axios"
 import { toast } from "sonner"
 import { io } from "socket.io-client"
 
-const BASE_URL = "http://localhost:5001"
+const BASE_URL = "https://chatx-e8o4.onrender.com"
 
 export const useAuthStore = create((set, get) => ({
 
