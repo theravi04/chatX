@@ -1,6 +1,7 @@
 import express from "express";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
+import callRoutes from "./routes/call.route.js";
 import dotenv from "dotenv";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
@@ -20,6 +21,7 @@ app.use(cors({
 
 app.use("/api/auth", authRoutes);
 app.use("/api/message", messageRoutes);
+app.use("/api/call", callRoutes);
 
 server.listen(PORT, () => {
   console.log("Server running on port", `${PORT}`);
