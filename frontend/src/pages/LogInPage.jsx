@@ -3,7 +3,6 @@ import { useAuthStore } from '../store/useAuthStore';
 import { Loader, Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
-import Navbar from "../components/Navbar";
 
 const LogInPage = () => {
   const { login, isLoggingIn } = useAuthStore();

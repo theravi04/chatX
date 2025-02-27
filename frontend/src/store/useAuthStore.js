@@ -3,7 +3,8 @@ import { axiosInstance } from "../lib/axios"
 import { toast } from "sonner"
 import { io } from "socket.io-client"
 
-const BASE_URL = "https://chatx-e8o4.onrender.com"
+// const BASE_URL = "https://chatx-e8o4.onrender.com"
+const BASE_URL = "http://localhost:5001"
 
 export const useAuthStore = create((set, get) => ({
 
@@ -17,7 +18,7 @@ export const useAuthStore = create((set, get) => ({
 
     checkAuth: async() => {
         try {
-            const res = await axiosInstance.get("/auth/check")
+            const res = await axiosInstance.get("/auth/check", { withCredentials: true });
             set({authUser: res.data})
             get().connectSocket()
         } catch (error) {
