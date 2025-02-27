@@ -9,6 +9,7 @@ const io = new Server(server, {
     cors: {
         origin: "https://chat-x-eta.vercel.app",
         // origin: "http://localhost:5173",
+        credentials: true, 
     }
 })
 
